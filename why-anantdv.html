@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Why Anantdv? | ERPNext, AI Automation & Digital Transformation</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #050512;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body > main {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .adv-logo {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+/* HEADER */
+.adv-header {
+    height: 66px;
+    background: rgba(8, 8, 28, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(167, 139, 250, 0.14);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    position: relative;
+}
+
+.adv-nav {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adv-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.adv-logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+.adv-menu {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.adv-menu a {
+    color: #b8b5d6;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.adv-menu a:hover,
+.adv-menu a.active {
+    color: #fff;
+}
+
+.adv-cta {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: #fff !important;
+    padding: 9px 18px;
+    font-size: 13px;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.30);
+}
+
+.adv-mobile-toggle {
+    display: none;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 8px;
+    width: 42px;
+    height: 38px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* PAGE BACKDROP */
+.why-page {
+    position: relative;
+    min-height: calc(100vh - 66px);
+    padding: 72px 24px 96px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(34,211,238,.16), transparent 30%),
+        radial-gradient(circle at 88% 16%, rgba(168,85,247,.20), transparent 32%),
+        radial-gradient(circle at 56% 92%, rgba(96,165,250,.12), transparent 34%),
+        linear-gradient(135deg, #050512 0%, #070716 48%, #081225 100%);
+}
+
+.why-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 58px 58px;
+    mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 72%);
+    opacity: .38;
+    pointer-events: none;
+}
+
+.why-blob {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(4px);
+    opacity: .74;
+    pointer-events: none;
+    animation: whyBlobFloat 8s ease-in-out infinite alternate;
+}
+
+.why-blob.one {
+    width: 240px;
+    height: 240px;
+    left: -70px;
+    top: 120px;
+    background: radial-gradient(circle, rgba(34,211,238,.24), transparent 68%);
+}
+
+.why-blob.two {
+    width: 320px;
+    height: 320px;
+    right: -110px;
+    top: 220px;
+    background: radial-gradient(circle, rgba(168,85,247,.28), transparent 68%);
+    animation-delay: 1.2s;
+}
+
+.why-blob.three {
+    width: 260px;
+    height: 260px;
+    left: 38%;
+    bottom: -120px;
+    background: radial-gradient(circle, rgba(96,165,250,.20), transparent 68%);
+    animation-delay: 2s;
+}
+
+@keyframes whyBlobFloat {
+    from { transform: translate3d(0,0,0) scale(1); }
+    to { transform: translate3d(18px,-24px,0) scale(1.08); }
+}
+
+/* FLOATING PAGE */
+.why-floating-page {
+    position: relative;
+    z-index: 4;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    border-radius: 34px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.035)),
+        rgba(8, 8, 28, .76);
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow:
+        0 38px 110px rgba(0,0,0,.55),
+        0 0 80px rgba(34,211,238,.08),
+        inset 0 1px 0 rgba(255,255,255,.12);
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+    transform: translateY(24px) scale(.975);
+    opacity: 0;
+    animation: whyPageOpen .8s cubic-bezier(.19,1,.22,1) forwards;
+}
+
+@keyframes whyPageOpen {
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.why-floating-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 16% 0%, rgba(34,211,238,.12), transparent 36%),
+        radial-gradient(circle at 90% 0%, rgba(168,85,247,.14), transparent 34%);
+    pointer-events: none;
+}
+
+.why-top-bar {
+    position: relative;
+    z-index: 2;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    background: rgba(0,0,0,.16);
+}
+
+.why-window-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.why-window-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.25);
+}
+
+.why-window-dots span:nth-child(1) { background: #fb7185; }
+.why-window-dots span:nth-child(2) { background: #facc15; }
+.why-window-dots span:nth-child(3) { background: #22c55e; }
+
+.why-route-label {
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.why-close-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.why-close-link:hover { color: #fff; }
+
+.why-content {
+    position: relative;
+    z-index: 2;
+    padding: 58px 58px 64px;
+}
+
+.why-hero {
+    display: grid;
+    grid-template-columns: 1.04fr .96fr;
+    gap: 54px;
+    align-items: center;
+    margin-bottom: 58px;
+}
+
+.why-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #22d3ee;
+    background: rgba(34,211,238,.08);
+    border: 1px solid rgba(34,211,238,.24);
+    border-radius: 999px;
+    padding: 8px 15px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.why-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: #22d3ee;
+    box-shadow: 0 0 14px rgba(34,211,238,.8);
+}
+
+.why-title {
+    margin: 0 0 22px;
+    font-size: clamp(40px, 5vw, 78px);
+    line-height: .95;
+    letter-spacing: -.065em;
+    font-weight: 900;
+}
+
+.why-title span {
+    display: block;
+    background: linear-gradient(90deg, #c084fc, #60a5fa, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.why-lead {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.78;
+    max-width: 650px;
+}
+
+.why-signal-board {
+    position: relative;
+    min-height: 420px;
+    border-radius: 30px;
+    padding: 28px;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(34,211,238,.15), transparent 40%),
+        rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.11);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 26px 70px rgba(0,0,0,.30);
+    overflow: hidden;
+}
+
+.why-signal-board::before {
+    content: "";
+    position: absolute;
+    inset: 26px;
+    border: 1px dashed rgba(34,211,238,.22);
+    border-radius: 24px;
+}
+
+.why-core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 158px;
+    height: 158px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: radial-gradient(circle, rgba(34,211,238,.20), rgba(124,58,237,.13), rgba(255,255,255,.04));
+    border: 1px solid rgba(34,211,238,.34);
+    box-shadow: 0 0 46px rgba(34,211,238,.20), inset 0 0 24px rgba(255,255,255,.06);
+}
+
+.why-core strong {
+    display: block;
+    font-size: 20px;
+}
+
+.why-core span {
+    display: block;
+    margin-top: 5px;
+    color: #93c5fd;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.why-signal {
+    position: absolute;
+    min-width: 128px;
+    padding: 13px 15px;
+    border-radius: 18px;
+    text-align: center;
+    background: rgba(255,255,255,.075);
+    border: 1px solid rgba(255,255,255,.13);
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 900;
+    box-shadow: 0 14px 34px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.07);
+    animation: whySignalFloat 4s ease-in-out infinite alternate;
+}
+
+.why-signal:nth-child(2) { left: 50%; top: 28px; transform: translateX(-50%); }
+.why-signal:nth-child(3) { right: 30px; top: 34%; animation-delay: .5s; }
+.why-signal:nth-child(4) { right: 72px; bottom: 34px; animation-delay: 1s; }
+.why-signal:nth-child(5) { left: 72px; bottom: 34px; animation-delay: 1.4s; }
+.why-signal:nth-child(6) { left: 30px; top: 34%; animation-delay: 1.8s; }
+
+@keyframes whySignalFloat {
+    from { margin-top: 0; }
+    to { margin-top: -12px; }
+}
+
+.why-section {
+    margin-top: 34px;
+}
+
+.why-section-head {
+    max-width: 820px;
+    margin-bottom: 24px;
+}
+
+.why-section-head h2 {
+    margin: 0 0 12px;
+    font-size: clamp(28px, 3vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+}
+
+.why-section-head h2 span {
+    background: linear-gradient(90deg, #c084fc, #60a5fa, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.why-section-head p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.why-card {
+    position: relative;
+    min-height: 230px;
+    padding: 26px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+    overflow: hidden;
+    transition: .28s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(34,211,238,.30);
+    box-shadow: 0 26px 60px rgba(0,0,0,.34), 0 0 34px rgba(34,211,238,.10);
+}
+
+.why-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 18% 12%, rgba(34,211,238,.14), transparent 32%);
+    opacity: .85;
+    pointer-events: none;
+}
+
+.why-card-icon {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    background: rgba(34,211,238,.10);
+    border: 1px solid rgba(34,211,238,.26);
+    color: #22d3ee;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.why-card h3 {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 10px;
+    font-size: 19px;
+    line-height: 1.18;
+    letter-spacing: -.025em;
+}
+
+.why-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.why-proof-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.why-proof {
+    padding: 24px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.03));
+    border: 1px solid rgba(255,255,255,.10);
+    text-align: center;
+}
+
+.why-proof strong {
+    display: block;
+    color: #22d3ee;
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 0 16px rgba(34,211,238,.36);
+}
+
+.why-proof span {
+    display: block;
+    color: #a5b4fc;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+    font-weight: 900;
+}
+
+.why-process {
+    display: grid;
+    gap: 12px;
+    counter-reset: process;
+}
+
+.why-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 18px;
+    align-items: start;
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.052);
+    border: 1px solid rgba(255,255,255,.10);
+}
+
+.why-step::before {
+    counter-increment: process;
+    content: "0" counter(process);
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(168,85,247,.12);
+    border: 1px solid rgba(168,85,247,.28);
+    color: #c084fc;
+    font-weight: 900;
+}
+
+.why-step h3 {
+    margin: 0 0 7px;
+    font-size: 18px;
+}
+
+.why-step p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.why-wide-panel {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 24px;
+    align-items: stretch;
+    padding: 26px;
+    border-radius: 28px;
+    background:
+        linear-gradient(90deg, rgba(34,211,238,.08), rgba(124,58,237,.10)),
+        rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.11);
+}
+
+.why-wide-panel h2 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 2.8vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -.04em;
+}
+
+.why-wide-panel p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.why-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+}
+
+.why-pill-list span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 9px 13px;
+    border-radius: 999px;
+    color: #dbeafe;
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(96,165,250,.10);
+    border: 1px solid rgba(96,165,250,.20);
+}
+
+/* FOOTER */
+.adv-footer {
+    padding: 80px 0 24px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124,58,237,.12), transparent 28%),
+        radial-gradient(circle at 85% 65%, rgba(34,211,238,.08), transparent 24%),
+        #050512;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.adv-footer-wrap {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 52px 52px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 70px;
+}
+
+.adv-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.adv-footer-logo-img {
+    height: 58px;
+    width: auto;
+    display: block;
+    max-width: 260px;
+}
+
+.adv-footer-brand p,
+.adv-footer-col p {
+    color: #a5a1c8;
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0 0 14px;
+}
+
+.adv-footer-col h4 {
+    color: #c084fc;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+
+.adv-footer-col a {
+    display: block;
+    color: #a5a1c8;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+
+.adv-footer-col a:hover { color: #fff; }
+
+.adv-footer-whatsapp {
+    width: 100%;
+    justify-content: center;
+}
+
+.adv-footer-bottom {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    color: #66638a;
+    font-size: 13px;
+}
+
+.adv-footer-bottom a {
+    color: #66638a;
+    text-decoration: none;
+    margin-left: 22px;
+}
+
+.adv-footer-bottom a:hover { color: #fff; }
+
+@media (max-width: 1080px) {
+    .why-hero,
+    .why-wide-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-proof-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 980px) {
+    .adv-nav { padding: 0 18px; }
+
+    .adv-mobile-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .adv-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 18px;
+        right: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+        background: rgba(8, 8, 28, 0.96);
+        border: 1px solid rgba(167, 139, 250, 0.18);
+        border-radius: 14px;
+        backdrop-filter: blur(18px);
+        z-index: 9999;
+    }
+
+    body.adv-menu-open .adv-menu { display: flex; }
+
+    .adv-menu a {
+        padding: 12px 10px;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .why-page {
+        padding: 28px 14px 58px;
+    }
+
+    .why-floating-page {
+        border-radius: 24px;
+    }
+
+    .why-content {
+        padding: 32px 18px 36px;
+    }
+
+    .why-hero {
+        gap: 28px;
+        margin-bottom: 36px;
+    }
+
+    .why-title {
+        font-size: 38px;
+    }
+
+    .why-lead,
+    .why-section-head p,
+    .why-wide-panel p {
+        font-size: 13px;
+    }
+
+    .why-signal-board {
+        min-height: 330px;
+        padding: 18px;
+    }
+
+    .why-core {
+        width: 124px;
+        height: 124px;
+    }
+
+    .why-core strong { font-size: 16px; }
+
+    .why-signal {
+        min-width: 94px;
+        padding: 10px 9px;
+        font-size: 10px;
+    }
+
+    .why-signal:nth-child(3) { right: 16px; }
+    .why-signal:nth-child(4) { right: 34px; bottom: 26px; }
+    .why-signal:nth-child(5) { left: 34px; bottom: 26px; }
+    .why-signal:nth-child(6) { left: 16px; }
+
+    .why-grid,
+    .why-proof-row {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .why-step {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .why-wide-panel {
+        padding: 20px;
+    }
+
+    .adv-footer {
+        padding: 60px 0 22px;
+    }
+
+    .adv-footer-wrap {
+        padding: 0 20px 36px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+
+    .adv-footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .adv-footer-brand p {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .adv-footer-logo-img {
+        height: 48px;
+        max-width: 230px;
+        margin: 0 auto;
+    }
+
+    .adv-footer-quick-links {
+        display: none;
+    }
+
+    .adv-footer-bottom {
+        padding: 20px 20px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .adv-footer-bottom a {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+}
+</style>
+</head>
+<body>
+<header class="adv-header">
+    <nav class="adv-nav">
+        <a href="./index.html" class="adv-logo">
+            <img src="./assets/anantdv_branding/images/anantdv-logo.png" alt="Anantdv Logo" class="adv-logo-img">
+        </a>
+        <button id="mobile-menu-toggle" class="adv-mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        <div class="adv-menu">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#erpnext">ERPNext</a>
+            <a href="./why-anantdv.html" class="active">Why Anantdv?</a>
+            <a href="./about-us.html">About</a>
+            <a href="./contact-us-adv.html">Contact</a>
+            <a href="./contact-us-adv.html" class="adv-cta">ERP Login</a>
+        </div>
+    </nav>
+</header>
+
+<main class="why-page">
+    <div class="why-blob one"></div>
+    <div class="why-blob two"></div>
+    <div class="why-blob three"></div>
+
+    <article class="why-floating-page" aria-label="Why Anantdv page">
+        <div class="why-top-bar">
+            <div class="why-window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="why-route-label">/ why-anantdv</div>
+            <a href="./index.html" class="why-close-link">Back Home</a>
+        </div>
+
+        <div class="why-content">
+            <section class="why-hero">
+                <div>
+                    <div class="why-badge">Why Anantdv?</div>
+                    <h1 class="why-title">
+                        Technology built around
+                        <span>real business work.</span>
+                    </h1>
+                    <p class="why-lead">
+                        ANANTDV is not a random software vendor. We study how your team actually works, then build ERPNext, automation, websites, apps, cloud infrastructure and reporting around those workflows. The goal is simple: fewer manual gaps, cleaner data, faster decisions and a system your team can actually use every day.
+                    </p>
+                </div>
+
+                <div class="why-signal-board" aria-label="Anantdv capability map">
+                    <div class="why-core"><div><strong>ANANTDV</strong><span>HI + ERP + AI</span></div></div>
+                    <div class="why-signal">ERPNext</div>
+                    <div class="why-signal">Automation</div>
+                    <div class="why-signal">Cloud & Infra</div>
+                    <div class="why-signal">Custom Apps</div>
+                    <div class="why-signal">Analytics</div>
+                </div>
+            </section>
+
+            <section class="why-section">
+                <div class="why-section-head">
+                    <h2>We do not force software on your business. <span>We shape software around it.</span></h2>
+                    <p>Most ERP projects fail because the system is installed before the business is understood. ANANTDV starts with process study, role clarity, data flow, approvals, documents and reporting needs before configuration begins.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">HI</div>
+                        <h3>Human Intelligence First</h3>
+                        <p>Our work is built on the idea that technology should enhance people, not replace them. Automation is used to remove repetitive work while keeping human judgment in control.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">ERP</div>
+                        <h3>ERPNext Specialists</h3>
+                        <p>We focus on ERPNext implementation, customization, reporting, workflows, print formats, integrations, data migration and long-term managed support.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">AI</div>
+                        <h3>Automation That Fits</h3>
+                        <p>Reports, notifications, approvals, customer communication, documents and operational tasks can be automated after the core process is clean.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">API</div>
+                        <h3>Connected Systems</h3>
+                        <p>We connect ERPNext with websites, portals, mobile apps, payment systems, third-party platforms and business-specific tools through secure integrations.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">INF</div>
+                        <h3>Infrastructure Ready</h3>
+                        <p>ERP is useless if hosting, backups, security and monitoring are weak. We support cloud migration, servers, managed services and reliable deployment planning.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">UX</div>
+                        <h3>Adoption-Focused Design</h3>
+                        <p>Clean interfaces, practical training, usable documentation and phased rollout help your team adopt the system instead of fighting it.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-section">
+                <div class="why-wide-panel">
+                    <div>
+                        <h2>One partner for ERP, apps, websites, infrastructure and strategy.</h2>
+                        <p>ANANTDV combines ERPNext development with application development, custom software, website design, IT/network planning, security thinking and strategic consulting. That matters because modern business systems are not isolated anymore.</p>
+                    </div>
+                    <div class="why-pill-list" aria-label="Anantdv service capability list">
+                        <span>ERPNext Implementation</span>
+                        <span>ERPNext Customization</span>
+                        <span>Frappe Custom Apps</span>
+                        <span>Cloud Migration</span>
+                        <span>Managed ERP Services</span>
+                        <span>Dashboards & Analytics</span>
+                        <span>Workflow Automation</span>
+                        <span>Website & Portal</span>
+                        <span>Mobile App Development</span>
+                        <span>API Integration</span>
+                        <span>IT Infrastructure</span>
+                        <span>Change Management</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-section">
+                <div class="why-section-head">
+                    <h2>What you actually get <span>when the work is done right.</span></h2>
+                    <p>The result should not be a beautiful login screen. The result should be operational control: cleaner records, faster approvals, fewer duplicate entries, better reporting and fewer blind spots.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">₹</div>
+                        <h3>Finance Control</h3>
+                        <p>Accounting, billing, tax, receivables, payables and cash-flow visibility connected to sales, purchase and stock movement.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">▦</div>
+                        <h3>Stock Accuracy</h3>
+                        <p>Warehouse visibility, stock ledger control, batches, serial numbers, reorder levels and real-time inventory movement.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">↗</div>
+                        <h3>Sales Discipline</h3>
+                        <p>Leads, opportunities, quotations, orders, delivery, invoices and follow-ups handled through one connected customer flow.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">🛒</div>
+                        <h3>Cleaner Procurement</h3>
+                        <p>Material requests, supplier quotations, purchase orders, receipts, bills and approval controls linked end-to-end.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">👥</div>
+                        <h3>HR & Payroll</h3>
+                        <p>Employee records, attendance, leave, payroll, claims, appraisals and recruitment managed without spreadsheet chaos.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">📊</div>
+                        <h3>Management Visibility</h3>
+                        <p>Dashboards, KPIs, custom reports and analytics that help leaders see what is happening before problems become expensive.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-section">
+                <div class="why-section-head">
+                    <h2>Our delivery method is simple: <span>study, build, test, train, stabilize.</span></h2>
+                    <p>No magic claims. No fake shortcut. ERPNext works when implementation is disciplined.</p>
+                </div>
+
+                <div class="why-process">
+                    <div class="why-step">
+                        <div>
+                            <h3>Business Process Study</h3>
+                            <p>We map departments, roles, approval paths, documents, reports, master data, pain points and current manual gaps before the system is configured.</p>
+                        </div>
+                    </div>
+                    <div class="why-step">
+                        <div>
+                            <h3>ERPNext Configuration</h3>
+                            <p>Modules, naming series, roles, permissions, workflows, print formats, tax rules, stock structure and accounting controls are configured for the actual operating model.</p>
+                        </div>
+                    </div>
+                    <div class="why-step">
+                        <div>
+                            <h3>Customization & Integration</h3>
+                            <p>Where standard ERPNext is not enough, we build custom DocTypes, reports, scripts, dashboards, portals, APIs and Frappe apps without damaging the core system.</p>
+                        </div>
+                    </div>
+                    <div class="why-step">
+                        <div>
+                            <h3>Data Migration & Testing</h3>
+                            <p>Opening balances, items, customers, suppliers, employees and key records are migrated carefully, validated and tested before users depend on the system.</p>
+                        </div>
+                    </div>
+                    <div class="why-step">
+                        <div>
+                            <h3>Training & Go-Live Support</h3>
+                            <p>Users are trained on their daily workflows, not generic software theory. After go-live, issues are stabilized and improvements are handled practically.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why-section">
+                <div class="why-section-head">
+                    <h2>Proof points that matter <span>for a growing business.</span></h2>
+                    <p>ANANTDV positions itself around practical ERPNext delivery, regional experience, specialist teams and customer-specific solutions instead of template-only deployment.</p>
+                </div>
+                <div class="why-proof-row">
+                    <div class="why-proof"><strong>7+</strong><span>Years Experience</span></div>
+                    <div class="why-proof"><strong>ERP</strong><span>Core Specialization</span></div>
+                    <div class="why-proof"><strong>AI</strong><span>Automation Ready</span></div>
+                    <div class="why-proof"><strong>APAC</strong><span>Regional Delivery</span></div>
+                </div>
+            </section>
+        </div>
+    </article>
+</main>
+
+<footer class="adv-footer">
+    <div class="adv-footer-wrap">
+        <div class="adv-footer-brand">
+            <a href="./index.html" class="adv-footer-logo">
+                <img src="./assets/anantdv_branding/images/anantdv-logo.png" alt="Anantdv Logo" class="adv-footer-logo-img">
+            </a>
+            <p>ANANTDV helps businesses grow with ERPNext implementation, AI automation, infrastructure solutions, websites and custom apps.</p>
+        </div>
+        <div class="adv-footer-col">
+            <h4>Our Services</h4>
+            <a href="./contact-us-adv.html">Business ERP</a>
+            <a href="./contact-us-adv.html">AI Automation</a>
+            <a href="./contact-us-adv.html">Infrastructure Solutions</a>
+            <a href="./contact-us-adv.html">Websites & Custom Apps</a>
+        </div>
+        <div class="adv-footer-col adv-footer-quick-links">
+            <h4>Quick Links</h4>
+            <a href="./index.html#erpnext">ERPNext</a>
+            <a href="./why-anantdv.html">Why Anantdv?</a>
+            <a href="./about-us.html">About</a>
+            <a href="./contact-us-adv.html">Contact</a>
+        </div>
+        <div class="adv-footer-col">
+            <h4>Contact Us</h4>
+            <p>Kolkata, India</p>
+            <p>Email: info@anantdv.com</p>
+            <a href="./contact-us-adv.html" class="adv-footer-whatsapp">Contact Now</a>
+        </div>
+    </div>
+    <div class="adv-footer-bottom">
+        <span>© 2026 ANANTDV. All Rights Reserved.</span>
+        <div>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="./contact-us-adv.html">Support</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', function () {
+            document.body.classList.toggle('adv-menu-open');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+});
+</script>
+</body>
+</html>
